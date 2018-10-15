@@ -8,7 +8,7 @@ import (
 	"log"
 	"os"
 
-	double_array "../.."
+	"github.com/shiroyagicorp/double_array"
 )
 
 func readNamesFromFile(path string) []double_array.Item {

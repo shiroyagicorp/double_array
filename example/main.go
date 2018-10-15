@@ -1,10 +1,11 @@
 package main
 
 import (
-	".."
 	"fmt"
 	"log"
 	"os"
+
+	"github.com/shiroyagicorp/double_array"
 )
 
 func main() {
