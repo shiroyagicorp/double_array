@@ -47,12 +47,12 @@ func main() {
 	}
 
 	names := readNamesFromFile(*flagIn)
-	da, dict, err := double_array.NewDoubleArray(names)
+	da, err := double_array.NewDoubleArray(names)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	data, err := da.Serialize(dict)
+	data, err := da.Serialize()
 	if err != nil {
 		log.Fatal(err)
 	}
