@@ -61,4 +61,12 @@ func main() {
 	da.Scan(text, func(i, j int, id double_array.ItemID) {
 		fmt.Printf("(%d, %d): %s\n", i, j, string(text[i:j]))
 	})
+
+	// でき上がった構造を保存しておきたいときはSerializeを呼び出し、返ってきたバイト配列を保存して下さい。
+	serialized, _ := da.Serialize()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(serialized[:10])
 }
