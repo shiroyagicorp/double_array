@@ -168,7 +168,7 @@ func NewDoubleArray(data []Item) (DoubleArray, error) {
 	}
 
 	doubleArray := &doubleArray{
-		nodes: make([]node, len(data) * 2),
+		nodes: make([]node, len(data)*2),
 		dict:  dict,
 	}
 	tail, err := constructDA(doubleArray, ivs, len(dict)+2)

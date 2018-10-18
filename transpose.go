@@ -24,7 +24,7 @@ func da2serializableDA(da *doubleArray) *serializableDA {
 func serializableDA2DA(tda *serializableDA) *doubleArray {
 	da := &doubleArray{
 		nodes: make([]node, len(tda.Base)),
-		dict: tda.Dict,
+		dict:  tda.Dict,
 	}
 	for i := range tda.Base {
 		da.nodes[i] = node{

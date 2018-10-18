@@ -45,7 +45,7 @@ func main() {
 	itemIDNotFound := da.Lookup([]rune("存在しないエントリ"))
 	fmt.Println(
 		"存在しないエントリの場合ItemNotFoundになります: ",
-		itemIDNotFound==double_array.ItemNotFound,
+		itemIDNotFound == double_array.ItemNotFound,
 	)
 
 	// 内部IDを文字列に戻す
@@ -58,7 +58,7 @@ func main() {
 	// 一度抽出した場所は再度抽出されません。
 	// 以下の例では「全角文字」「漢字」は抽出されますが「全角」「文字」は抽出されません。
 	text := []rune("全角文字を使うと漢字を表現できます。")
-	da.Scan(text, func(i, j int, id double_array.ItemID){
+	da.Scan(text, func(i, j int, id double_array.ItemID) {
 		fmt.Printf("(%d, %d): %s\n", i, j, string(text[i:j]))
 	})
 }
