@@ -11,4 +11,4 @@
 
 ## License
 
-検討中
+MIT
