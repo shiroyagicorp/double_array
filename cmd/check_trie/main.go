@@ -62,12 +62,12 @@ func checkDA(names []double_array.Item, da double_array.DoubleArray) error {
 }
 
 func main() {
-	flagNames := flag.String("name", "", "name file path")
+	flagText := flag.String("text", "", "original text file path")
 	flagBinary := flag.String("binary", "", "binary file path")
 
 	flag.Parse()
 
-	if *flagNames == "" || *flagBinary == "" {
+	if *flagText == "" || *flagBinary == "" {
 		flag.Usage()
 		os.Exit(1)
 	}
@@ -77,7 +77,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	names := readNamesFromFile(*flagNames)
+	names := readNamesFromFile(*flagText)
 	da, err := double_array.NewDoubleArrayFromBytes(data)
 	if err != nil {
 		log.Fatal(err)
