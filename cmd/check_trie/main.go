@@ -63,16 +63,16 @@ func checkDA(names []double_array.Item, da double_array.DoubleArray) error {
 
 func main() {
 	flagNames := flag.String("name", "", "name file path")
-	flagModel := flag.String("model", "", "model file path")
+	flagBinary := flag.String("binary", "", "binary file path")
 
 	flag.Parse()
 
-	if *flagNames == "" || *flagModel == "" {
+	if *flagNames == "" || *flagBinary == "" {
 		flag.Usage()
 		os.Exit(1)
 	}
 
-	data, err := ioutil.ReadFile(*flagModel)
+	data, err := ioutil.ReadFile(*flagBinary)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -82,7 +82,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("...done reading DA model...")
+	fmt.Println("...done reading DA binary file...")
 
 	err = checkDA(names, da)
 	if err != nil {
