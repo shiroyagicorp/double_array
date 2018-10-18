@@ -9,6 +9,10 @@
 * 文字ベースTrie
 * MessagePackでシリアライズ可能
 
+## 注意
+
+go modulesを使っています。
+
 ## License
 
 MIT
