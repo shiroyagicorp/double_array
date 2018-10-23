@@ -1,5 +1,7 @@
 # 白ヤギDA
 
+[GoDoc(準備中)](https://godoc.org/github.com/shiroyagicorp/double_array)
+
 ## このプロジェクトについて
 
 このプロジェクトは白ヤギコーポレーションで開発したダブル配列の実装です。
