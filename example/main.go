@@ -68,5 +68,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(serialized[:10])
+	// デシリアライズするときはNewDoubleArrayFromBytesを使って下さい。
+	da, _ = double_array.NewDoubleArrayFromBytes(serialized)
+	itemID = da.Lookup([]rune("xyzabc"))
+	fmt.Printf("「xyzabc」のItemID=%d\n", itemID)
 }
