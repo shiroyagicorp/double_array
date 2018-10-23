@@ -1,6 +1,6 @@
 # 白ヤギDA
 
-[GoDoc(準備中)](https://godoc.org/github.com/shiroyagicorp/double_array)
+[![GoDoc](https://godoc.org/github.com/shiroyagicorp/double_array?status.svg)](https://godoc.org/github.com/shiroyagicorp/double_array)
 
 ## このプロジェクトについて
 
